@@ -10,6 +10,7 @@ export class AppComponent {
   paymentDate?: string;
   amount?: number;
   height?: number;
+  miles?: number;
 
   car = {
     make: 'Toyota',
@@ -35,5 +36,10 @@ export class AppComponent {
   onHeightChange(event: Event) {
     const value = (event.target as HTMLInputElement).value;
     this.height = parseFloat(value);
+  }
+
+  onMilesChange(event: Event) {
+    const value = (event.target as HTMLInputElement).value;
+    this.miles = parseFloat(value);
   }
 }
